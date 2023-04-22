@@ -26,4 +26,6 @@ aws_bin=$tmp_dir/aws/dist/aws
 
 download_file $aws_bin assets/$SOURCE_VERSION.tar
 
+local asset_manifest_path=$(get_env_variable ${env_dir} "ASSET_MANIFEST_PATH")
+
 tar -xf $build_dir/$asset_manifest_path/$SOURCE_VERSION.tar -C $build_dir/$asset_manifest_path
