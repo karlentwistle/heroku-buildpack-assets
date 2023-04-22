@@ -16,5 +16,7 @@ download_file () {
     echo "Downloaded remote $remote_path to $asset_manifest_path" | indent
   fi
 
+  tar -xf $build_dir/$asset_manifest_path/$SOURCE_VERSION.tar -C $build_dir/$asset_manifest_path
+
   return $status
 }
