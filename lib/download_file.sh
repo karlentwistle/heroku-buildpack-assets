@@ -3,7 +3,7 @@
 download_file () {
   local aws_binary_path=$1
   local remote_path=$2
-  local asset_manifest_path=$(get_env_variable ${env_dir} "ASSET_MANIFEST_PATH")
+  local asset_manifest_path=$3
 
   AWS_ACCESS_KEY_ID=$(get_env_variable ${env_dir} "AWS_ACCESS_KEY_ID") \
     AWS_SECRET_ACCESS_KEY=$(get_env_variable ${env_dir} "AWS_SECRET_ACCESS_KEY") \
