@@ -13,7 +13,7 @@ download_file () {
   local status=$?
 
   if [[ status -eq 0 ]]; then
-    echo "Downloaded remote $remote_path to $asset_manifest_path" | indent
+    echo "Downloaded remote $remote_path to $build_dir/$asset_manifest_path" | indent
   fi
 
   return $status
